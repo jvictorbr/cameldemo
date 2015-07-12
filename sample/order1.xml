@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order>
+	<originId>14389753</originId>
+	<items>
+		<order-item>
+			<id>1</id>
+			<name>engine</name>
+			<quantity>1</quantity>
+		</order-item>
+		<order-item>
+			<id>2</id>
+			<name>clutch</name>
+			<quantity>1</quantity>
+		</order-item>
+		<order-item>
+			<id>3</id>
+			<name>wheel</name>
+			<quantity>4</quantity>
+		</order-item>
+	</items>
+</order>

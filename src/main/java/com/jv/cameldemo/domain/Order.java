@@ -1,22 +1,22 @@
 package com.jv.cameldemo.domain;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 public class Order {
 	
 	private Date dateReceived;
+	private long id;
 	private long originId;
 	private List<OrderItem> items = new ArrayList<OrderItem>();
 	
 	public Order() {
 		this.dateReceived = new Date();
+		this.id = new SecureRandom().nextLong();
 	}
-	
-	//@JsonFormat(pattern="yyyyMMdd hh:mm:sss")
+
 	public Date getDateReceived() {
 		return dateReceived;
 	}
@@ -37,6 +37,17 @@ public class Order {
 	}
 	public void setItems(List<OrderItem> items) {
 		this.items = items;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
 	}	
+	
+	@Override
+	public String toString() { 
+		return String.format("{id: %s, originId: %s, dateReceived: %s}", getId(), getOriginId(), getDateReceived());
+	}
 
 }

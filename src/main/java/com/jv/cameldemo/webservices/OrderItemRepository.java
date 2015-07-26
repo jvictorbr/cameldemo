@@ -14,7 +14,7 @@ public class OrderItemRepository {
 		database.put(2L, new OrderItem(2, "clutch", 5, 250d));
 		database.put(3L, new OrderItem(3, "wheel", 20, 100d));
 		database.put(4L, new OrderItem(4, "hood", 10, 100d));
-		database.put(5L, new OrderItem(5, "door", 20, 60d));
+		database.put(5L, new OrderItem(5, "door", 0, 60d));
 	}
 	
 	public OrderItem findById(long id) { 
